@@ -24,6 +24,15 @@
         vertical-align: text-top;
         font-weight: bold;
       }
+
+      td{
+        vertical-align: text-top;
+      }
+
+      .tile > * {
+        padding: 1rem;
+      }
+
       td.title {
         max-width: 150px;
       }
@@ -75,21 +84,19 @@
     <main>
       <h1>Bendik Arbogast</h1>
       <p class="header">
-        Giebeleich 2, 8052 Zürich, Switzerland <br>
+        Hadlaubstrasse 87, 8006 Zürich, Switzerland <br>
         bendik@arbogast.dev | +41766991897 | <a href="https://arbogast.dev">arbogast.dev</a> | <a href="https://linkedin.com/in/bendik-arbogast-7a0a53252">LinkedIn</a>
       </p>
       <br>
       <table id="content">
         <tr><td colspan="4"><hr></td></tr>
-
         <tr class="groups">
-          <td class="title" rowspan="3">Education:</td>
+          <td class="title" rowspan="3">Education</td>
           <td class="main_ul" style="padding-left:35px"> 09/2013 - 07/2019 </td>
           <td colspan="2">
             <b>Gymnasium in der Taus, Backnang</b>
           </td>
         </tr>
-
         <tr class="groups">
           <td class="main_ul" style="padding-left:35px"> 09/2019 - 07/2022 </td>
           <td colspan="2">
@@ -100,7 +107,6 @@
             </ul>
           </td>
         </tr>
-
         <tr class="groups">
           <td class="main_ul" style="padding-left:35px"> 08/2022 - Present </td>
           <td colspan="2">
@@ -109,17 +115,14 @@
         </tr>
 
         <tr><td colspan="4"><hr></td></tr>
-
-
         <tr class="groups">
-          <td class="title" style="padding-left:20px" rowspan="2" > Certificates </td>
+          <td class="title" style="padding-left:20px" rowspan="2"> Certificates </td>
           <td class="main_ul" style="padding-left:35px">10/2021</td>
           <td colspan="2">
             <b>CS50x Introduction to ComputerScience</b><br>
             HarvardX/EdX. Online
           </td>
         </tr>
-
         <tr class="groups">
           <td class="main_ul" style="padding-left:35px">06/2019</td>
           <td colspan="2">
@@ -127,18 +130,51 @@
             Institut français d'Allemagne
           </td>
         </tr>
-      </table>
-      <table>
 
         <tr><td colspan="4"><hr></td></tr>
+        <tr id="groups">
+          <td class="title" style="padding-left:20px"> Experience </td>
+          <td class="main_ul" style="padding-left:35px">12/2023 - Present</td>
+          <td colspan="2">
+            <b>Self-employed</b><br>
+            Designed and developed an automation solution for a larger Zurich-based business in construction.
+            (details disclosed due to NDA)
+          </td>
+        </tr>
 
-        <tr class="groups">
+        <tr><td colspan="4"><hr></td></tr>
+        <tr id="groups">
+          <td class="title" style="padding-left:20px" rowspan="1"> Expertise </td>
+          <td class="main_ul" style="padding-left:35px" colspan="3">
+        </tr>
+      </table>
+      <br>
+      <table>
+        <tr>
+          <td style="padding-left:20px" class="tile" colspan="2">
+            <b>Web Development</b>
+            <ul type="square" style="width: 320px; margin: 0">
+              <li>Designed and developed a web-based custom automation solution for a client.</li>
+              <li>Started web development on personal projects 6+ years ago.</li>
+              <li>Implemented multiple projects using php, fastapi or express for personal use, in highschool or university courses.</li>
+              <li>Highly proficient in javascript/typescript.</li>
+            </ul>
+          </td>
+
+          <td style="padding-left:20px" class="tile" colspan="2">
+            <b>Machine Learning</b>
+            <ul type="square" style="width: 320px; margin: 0">
+              <li>Multiple personal and university projects using numpy, pandas and torch.</li>
+              <li>Implemented GPU accelerated Neural Networks in WebGL and WebGPU.</li>
+              <li>Passed "Introduction to Machine Learning" course at ETH with 5.0.</li>
+            </ul>
+          </td>
+          <!--
           <td style="padding-left:20px">
-            <span class="title">Expertise</span>
             <ul type="square" style="width: 135px; margin: 0 0 0 -10px">
               <li>Computer Graphics</li>
               <li>Machine Learning</li>
-              <li>Linux (5+ years)</li>
+              <li>Linux (6+ years)</li>
               <li>Web development</li>
             </ul>
           </td>
@@ -146,18 +182,19 @@
           <td style="padding-left:10px">
             <span class="title">Coding Languages</span>
             <ul type="square" style="width: 150px; margin: 0 0 0 -10px">
-              <li>Javascript (node, web)</li>
-              <li>Python (flask / fastapi)</li>
-              <li>Dart</li>
-              <li>Java (Android)</li>
+              <li>JS (express, frontend)</li>
+              <li>Python (numpy, pandas, torch)</li>
+              <li>GLSL</li>
+              <li>WGSL for WebGPU</li>
             </ul>
             <span></span>
           </td>
+
           <td>
             <ul type="square" style="width: 175px; margin: 25px -50px 0 -10px">
               <li>SQL</li>
               <li>C</li>
-              <li>GLSL (WebGL2)</li>
+              <li>Dart and Java for Android</li>
               <li>Verilog (for Xilinx FPGAs)</li>
             </ul>
             <span></span>
@@ -171,6 +208,30 @@
               <li>French</li>
             </ul>
             <span></span>
+          </td>
+
+          -->
+        </tr>
+
+        <tr class="groups">
+          <td style="padding-left:20px" class="tile" colspan="2">
+            <b>Computer Graphics</b>
+            <ul type="square" style="width: 320px; margin: 0">
+              <li>Learned WebGL2 in 2020 during lockdown.</li>
+              <li>Wrote multiple personal projects using WebGL2.</li>
+              <li>Added WebGPU implementation of FlexLight.</li>
+              <li>Developed a WebGPU powered architecture planer as a final project for the "Fundamentals of Web Engineering" course.</li>
+            </ul>
+          </td>
+
+          <td style="padding-left:20px" class="tile" colspan="2">
+            <b>Linux</b>
+            <ul type="square" style="width: 320px; margin: 0">
+              <li>Using Linux as my primary Operating System for 6+ years.</li>
+              <li>Managed multiple Linux-VPS instances and websites.</li>
+              <li>Docker</li>
+              <li>Setting up and maintaining Nginx, NodeJS, MySQL, Dovecot and Postfix installations.</li>
+            </ul>
           </td>
         </tr>
         
@@ -190,17 +251,15 @@
               <p style="padding-left:20px">
                 FlexLight is a web-based fully modular render engine, that supports real time Monte-Carlo Pathtracing (using BVHs and importance sampling). 
                 The engine features a built-in Denoiser and uses PBR materials and several approximations grounded in physics to achive realistic lighting. 
-                Additionally it allows obj file imports and supports fully dynamic scenes. I built the engine entirely from scratch by myself using WebGL 2 and Javascript. WebGPU will be supported in future iterations.
+                Additionally it allows obj file imports and supports fully dynamic scenes. I built the engine entirely from scratch by myself using WebGL 2 and Javascript. A WebGPU backend using compute shaders was implemented in 2024.
               </p>
               <p>
                 <b>NeuNet</b>
                 (<a href="https://github.com/arbobendik/NeuNet">GitHub</a> | <a href="https://arbogast.dev/?page=iframe&target=NeuNet/">Demo</a>)
               </p>
               <p style="padding-left:20px">
-                Neunet is a web frontend library that implements Neural Networks using GPU acceleration with WebGL 2.
+                Neunet is a web frontend library that implements Neural Networks using GPU acceleration with WebGL 2 and is currently being reworked to support arbitrary derivable layers and arbitrary loss functions using WebGPU.
                 Different activation functions like leaky ReLU, tanh, sigmoid or linear output are supported and can be assigned dynamically on a per neuron basis.
-                For instance <a href="https://github.com/arbobendik/Sourcerer">Sourcerer</a>, another project I'm developing, builds upon NeuNet and uses it to test a different approach to image generation
-                by training neural nets on the DCT (discrete cosine tranform) of an image instead of directly using RGB color values.
               </p>
           </td>
         </tr>
