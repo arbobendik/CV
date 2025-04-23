@@ -2,7 +2,7 @@
 <html lang="">
   <head>
     <meta charset="utf-8">
-    <title>bendik_arbogast</title>
+    <title>resume</title>
     <style>
       html {
         font-family: sans-serif;
@@ -30,7 +30,17 @@
       }
 
       .tile > * {
-        padding: 1rem;
+        padding: .5rem 1rem .5rem 1rem;
+      }
+
+      .skill_title {
+        padding: .25rem .5rem 0 0;
+        text-align: right;
+      }
+
+      .skill_text {
+        padding: .25rem 0 0 .5rem;
+        text-align: left;
       }
 
       td.title {
@@ -144,7 +154,7 @@
 
         <tr><td colspan="4"><hr></td></tr>
         <tr id="groups">
-          <td class="title" style="padding-left:20px" rowspan="1"> Expertise </td>
+          <td class="title" style="padding-left:20px" rowspan="1">Expertise</td>
           <td class="main_ul" style="padding-left:35px" colspan="3">
         </tr>
       </table>
@@ -155,17 +165,16 @@
             <b>Web Development</b>
             <ul type="square" style="width: 320px; margin: 0">
               <li>Designed and developed a web-based custom automation solution for a client.</li>
-              <li>Started web development on personal projects 6+ years ago.</li>
-              <li>Implemented multiple projects using php, fastapi or express for personal use, in highschool or university courses.</li>
-              <li>Highly proficient in javascript/typescript.</li>
+              <li>Started web development as a hobby over 6 years ago.</li>
+              <li>Highly proficient in javascript/typescript and several common frameworks: express, next, react, fastapi, etc.</li>
             </ul>
           </td>
 
           <td style="padding-left:20px" class="tile" colspan="2">
             <b>Machine Learning</b>
             <ul type="square" style="width: 320px; margin: 0">
-              <li>Multiple personal and university projects using numpy, pandas and torch.</li>
-              <li>Implemented GPU accelerated Neural Networks in WebGL and WebGPU.</li>
+              <li>Multiple private and university projects using numpy, pandas and torch.</li>
+              <li>Implemented GPU accelerated MLPs using WebGL and WebGPU.</li>
               <li>Passed "Introduction to Machine Learning" course at ETH with 5.0.</li>
             </ul>
           </td>
@@ -217,8 +226,7 @@
           <td style="padding-left:20px" class="tile" colspan="2">
             <b>Computer Graphics</b>
             <ul type="square" style="width: 320px; margin: 0">
-              <li>Learned WebGL2 in 2020 during lockdown.</li>
-              <li>Wrote multiple personal projects using WebGL2.</li>
+              <li>Wrote multiple small projects using WebGL2 starting in 2020.</li>
               <li>Added WebGPU implementation of FlexLight.</li>
               <li>Developed a WebGPU powered architecture planer as a final project for the "Fundamentals of Web Engineering" course.</li>
             </ul>
@@ -227,7 +235,7 @@
           <td style="padding-left:20px" class="tile" colspan="2">
             <b>Linux</b>
             <ul type="square" style="width: 320px; margin: 0">
-              <li>Using Linux as my primary Operating System for 6+ years.</li>
+              <li>Using Linux as my primary Operating System for over 7 years.</li>
               <li>Managed multiple Linux-VPS instances and websites.</li>
               <li>Docker</li>
               <li>Setting up and maintaining Nginx, NodeJS, MySQL, Dovecot and Postfix installations.</li>
@@ -250,17 +258,77 @@
               </p>
               <p style="padding-left:20px">
                 FlexLight is a web-based fully modular render engine, that supports real time Monte-Carlo Pathtracing (using BVHs and importance sampling). 
-                The engine features a built-in Denoiser and uses PBR materials and several approximations grounded in physics to achive realistic lighting. 
-                Additionally it allows obj file imports and supports fully dynamic scenes. I built the engine entirely from scratch by myself using WebGL 2 and Javascript. A WebGPU backend using compute shaders was implemented in 2024.
+                The engine features a built-in Denoiser and uses PBR materials and several approximations grounded in physics to achieve realistic lighting. 
+                It allows obj file imports and supports fully dynamic scenes. I built the engine originally using javascript and WebGL2 and pivoted in 2024 to WebGPU and typescript.
               </p>
               <p>
                 <b>NeuNet</b>
                 (<a href="https://github.com/arbobendik/NeuNet">GitHub</a> | <a href="https://arbogast.dev/?page=iframe&target=NeuNet/">Demo</a>)
               </p>
               <p style="padding-left:20px">
-                Neunet is a web frontend library that implements Neural Networks using GPU acceleration with WebGL 2 and is currently being reworked to support arbitrary derivable layers and arbitrary loss functions using WebGPU.
-                Different activation functions like leaky ReLU, tanh, sigmoid or linear output are supported and can be assigned dynamically on a per neuron basis.
+                Neunet is a web frontend library that implements MLPs using GPU acceleration with WebGL2.
+                It leverages WebGL2 fragment shaders to parallelize forward and backward passes for MLPs using the GPU on the browser frontend.
+                The library supports commonly used activation functions and layer normalization.
               </p>
+          </td>
+        </tr>
+
+        <tr><td colspan="4"><hr></td></tr>
+
+        <tr class="groups">
+          <td style="padding-left:20px" colspan="1">
+            <span class="title">Languages</span>
+          </td>
+          <td style="padding-left:40px" colspan="3">
+            <span class="title">Skills</span>
+          </td>
+        </tr>
+
+        <tr class="groups">
+          <td class="tile" style="padding-left:20px; width: 300px;" colspan="1">
+            <table class="skills">
+              <tr class="skill">
+                <td class="skill_title"><b>German</b></td>
+                <td class="skill_text">Native</td>
+              </tr>
+              <tr class="skill">
+                <td class="skill_title"><b>English</b></td>
+                <td class="skill_text">C2</td>
+              </tr>
+              <tr class="skill">
+                <td class="skill_title" ><b>French</b></td>
+                <td class="skill_text">B1</td>
+              </tr>
+            </table>
+          </td>
+
+          <td class="tile" style="padding-left:20px" colspan="3">
+            <table class="skills">
+              <tr class="skill">
+                <td class="skill_title"><b>Backend</b></td>
+                <td class="skill_text">node, express, nextjs, fastapi, php</td>
+              </tr>
+              <tr class="skill" >
+                <td class="skill_title"><b>Web Design</b></td>
+                <td class="skill_text">html, css, js, ts, react</td>
+              </tr>
+              <tr class="skill">
+                <td class="skill_title"><b>Mobile</b></td>
+                <td class="skill_text">android, java, dart, flutter</td>
+              </tr>
+              <tr class="skill">
+                <td class="skill_title"><b>Graphics</b></td>
+                <td class="skill_text">WebGL, WebGPU, GLSL, WGSL</td>
+              </tr>
+              <tr class="skill">
+                <td class="skill_title"><b>ML</b></td>
+                <td class="skill_text">numpy, pandas, torch</td>
+              </tr>
+              <tr class="skill">
+                <td class="skill_title"><b>DevOps</b></td>
+                <td class="skill_text">docker, linux, bash, nginx</td>
+              </tr>
+            </table>
           </td>
         </tr>
 
