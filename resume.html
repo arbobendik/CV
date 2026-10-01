@@ -6,7 +6,7 @@
     <style>
       html {
         font-family: sans-serif;
-        font-size: 15px;
+        font-size: 12px;
       }
       #img_block {
         position: absolute;
@@ -15,7 +15,7 @@
         right: 50px;
       }
       #content {
-        padding-top: 55px;
+        padding-top: 3rem;
       }
       .title {
         width: 10%;
@@ -30,7 +30,7 @@
       }
 
       .tile > * {
-        padding: .5rem 1rem .5rem 1rem;
+        padding: .25rem 1rem .25rem 1rem;
       }
 
       .skill_title {
@@ -47,8 +47,9 @@
         max-width: 150px;
       }
       .main_ul {
-        width: 25%;
+        width: 10rem;
         padding: 0;
+        padding-left: 2.5rem;
         vertical-align: text-top;
       }
       .attribute {
@@ -86,7 +87,32 @@
         text-align: center;
       }
       li {
-        margin-top: 6px;
+        margin-top: .25rem;
+      }
+
+      @page {
+        size: A4 portrait;
+        margin: 10mm;
+      }
+
+      @media print {
+        body {
+          margin: 0;
+          print-color-adjust: exact;
+          -webkit-print-color-adjust: exact;
+        }
+        main {
+          position: relative;
+        }
+        #content {
+          width: 100%;
+        }
+        .tile > ul {
+          width: auto !important;
+        }
+        tr {
+          break-inside: avoid;
+        }
       }
     </style>
   </head>
@@ -95,20 +121,20 @@
       <h1>Bendik Arbogast</h1>
       <p class="header">
         Hadlaubstrasse 87, 8006 Zürich, Switzerland <br>
-        bendik@arbogast.dev | +41766991897 | <a href="https://arbogast.dev">arbogast.dev</a> | <a href="https://linkedin.com/in/bendik-arbogast-7a0a53252">LinkedIn</a>
+        bendik@arbogast.dev | +41766991897 | <a href="https://arbogast.dev">arbogast.dev</a> | <a href="https://www.linkedin.com/in/bendik-arbogast">LinkedIn</a>
       </p>
       <br>
       <table id="content">
         <tr><td colspan="4"><hr></td></tr>
         <tr class="groups">
-          <td class="title" rowspan="3">Education</td>
-          <td class="main_ul" style="padding-left:35px"> 09/2013 - 07/2019 </td>
+          <td class="title" rowspan="4">Education</td>
+          <td class="main_ul"> 09/2013 - 07/2019 </td>
           <td colspan="2">
             <b>Gymnasium in der Taus, Backnang</b>
           </td>
         </tr>
         <tr class="groups">
-          <td class="main_ul" style="padding-left:35px"> 09/2019 - 07/2022 </td>
+          <td class="main_ul"> 09/2019 - 07/2022 </td>
           <td colspan="2">
             <b>Gewerbliche Schule Backnang</b>
             <ul type="square" style="margin: 5px -5px 5px 0;">
@@ -118,23 +144,29 @@
           </td>
         </tr>
         <tr class="groups">
-          <td class="main_ul" style="padding-left:35px"> 08/2022 - Present </td>
+          <td class="main_ul"> 09/2022 - 06/2026 </td>
           <td colspan="2">
               <b>ETH Zürich - BSc Computer Science</b>
+          </td>
+        </tr>
+        <tr class="groups">
+          <td class="main_ul">09/2026 - Present</td>
+          <td colspan="2">
+            <b>ETH Zürich - MSc Computer Science</b>
           </td>
         </tr>
 
         <tr><td colspan="4"><hr></td></tr>
         <tr class="groups">
           <td class="title" style="padding-left:20px" rowspan="2"> Certificates </td>
-          <td class="main_ul" style="padding-left:35px">10/2021</td>
+          <td class="main_ul">10/2021</td>
           <td colspan="2">
-            <b>CS50x Introduction to ComputerScience</b><br>
-            HarvardX/EdX. Online
+            <b>CS50x: CS50's Introduction to Computer Science</b><br>
+            HarvardX / edX · Online
           </td>
         </tr>
         <tr class="groups">
-          <td class="main_ul" style="padding-left:35px">06/2019</td>
+          <td class="main_ul">06/2019</td>
           <td colspan="2">
             <b>DELF certificate B1</b><br>
             Institut français d'Allemagne
@@ -144,131 +176,91 @@
         <tr><td colspan="4"><hr></td></tr>
         <tr id="groups">
           <td class="title" style="padding-left:20px"> Experience </td>
-          <td class="main_ul" style="padding-left:35px">12/2023 - Present</td>
+          <td class="main_ul">04/2026 - 09/2026</td>
           <td colspan="2">
-            <b>Self-employed</b><br>
-            Designed and developed an automation solution for a larger Zurich-based business in construction.
-            (details disclosed due to NDA)
+            <b>Software Development Intern - Esri R&amp;D Center Zurich</b><br>
+            Full-time · Zurich, Switzerland · Hybrid
+          </td>
+        </tr>
+        <tr class="groups">
+          <td></td>
+          <td class="main_ul">12/2023 - Present</td>
+          <td colspan="2">
+            <b>Software Engineer - Arbogast Solutions</b> (self-employed)<br>
+            Web development and automation solutions, including a custom solution for a Zurich-based construction business.
+          </td>
+        </tr>
+        <tr id="groups">
+          <td></td>
+          <td class="main_ul">09/2025 - 04/2026</td>
+          <td colspan="2">
+            <b>Student Researcher (Bachelor Thesis) - Disney Research</b><br>
+            Posing meshes in SIM(3) through inverse rendering using torch. Thesis grade: 5.5.
           </td>
         </tr>
 
         <tr><td colspan="4"><hr></td></tr>
         <tr id="groups">
           <td class="title" style="padding-left:20px" rowspan="1">Expertise</td>
-          <td class="main_ul" style="padding-left:35px" colspan="3">
+          <td class="main_ul" colspan="3">
         </tr>
-      </table>
-      <br>
-      <table>
         <tr>
-          <td style="padding-left:20px" class="tile" colspan="2">
+          <td style="padding-left:20px" class="tile" colspan="3">
             <b>Web Development</b>
             <ul type="square" style="width: 320px; margin: 0">
-              <li>Designed and developed a web-based custom automation solution for a client.</li>
-              <li>Started web development as a hobby over 6 years ago.</li>
-              <li>Highly proficient in javascript/typescript and several common frameworks: express, next, react, fastapi, etc.</li>
+              <li>Designed and developed a custom automation solution for a client.</li>
+              <li>Started as a hobby over 6 years ago.</li>
+              <li>Highly proficient in javascript/typescript and frameworks: express, next, react, fastapi, etc.</li>
             </ul>
           </td>
 
-          <td style="padding-left:20px" class="tile" colspan="2">
+          <td style="padding-left:20px" class="tile" colspan="1">
             <b>Machine Learning</b>
             <ul type="square" style="width: 320px; margin: 0">
-              <li>Multiple private and university projects using numpy, pandas and torch.</li>
+              <li>Multiple personal projects, university projects and my Bachelor Thesis using numpy, pandas and torch.</li>
               <li>Implemented GPU accelerated MLPs using WebGL and WebGPU.</li>
-              <li>Passed "Introduction to Machine Learning" course at ETH with 5.0.</li>
             </ul>
           </td>
-          <!--
-          <td style="padding-left:20px">
-            <ul type="square" style="width: 135px; margin: 0 0 0 -10px">
-              <li>Computer Graphics</li>
-              <li>Machine Learning</li>
-              <li>Linux (6+ years)</li>
-              <li>Web development</li>
-            </ul>
-          </td>
-
-          <td style="padding-left:10px">
-            <span class="title">Coding Languages</span>
-            <ul type="square" style="width: 150px; margin: 0 0 0 -10px">
-              <li>JS (express, frontend)</li>
-              <li>Python (numpy, pandas, torch)</li>
-              <li>GLSL</li>
-              <li>WGSL for WebGPU</li>
-            </ul>
-            <span></span>
-          </td>
-
-          <td>
-            <ul type="square" style="width: 175px; margin: 25px -50px 0 -10px">
-              <li>SQL</li>
-              <li>C</li>
-              <li>Dart and Java for Android</li>
-              <li>Verilog (for Xilinx FPGAs)</li>
-            </ul>
-            <span></span>
-          </td>
-
-          <td style="padding-left:30px; padding-right: 70px;">
-            <span class="title">Languages</span>
-            <ul type="square" style="margin: 0 0 25px -10px">
-              <li>German</li>
-              <li>English</li>
-              <li>French</li>
-            </ul>
-            <span></span>
-          </td>
-
-          -->
         </tr>
 
         <tr class="groups">
-          <td style="padding-left:20px" class="tile" colspan="2">
+          <td style="padding-left:20px" class="tile" colspan="3">
             <b>Computer Graphics</b>
             <ul type="square" style="width: 320px; margin: 0">
-              <li>Wrote multiple small projects using WebGL2 starting in 2020.</li>
-              <li>Added WebGPU implementation of FlexLight.</li>
-              <li>Developed a WebGPU powered architecture planer as a final project for the "Fundamentals of Web Engineering" course.</li>
+              <li>multiple small projects using WebGL2 starting in 2020</li>
+              <li>WebGPU implementation of FlexLight</li>
+              <li>architecture planer using WebGPU</li>
             </ul>
           </td>
 
-          <td style="padding-left:20px" class="tile" colspan="2">
+          <td style="padding-left:20px" class="tile" colspan="1">
             <b>Linux</b>
             <ul type="square" style="width: 320px; margin: 0">
-              <li>Using Linux as my primary Operating System for over 7 years.</li>
-              <li>Managed multiple Linux-VPS instances and websites.</li>
+              <li>Using Linux as my primary Operating System (6+ years)</li>
               <li>Docker</li>
-              <li>Setting up and maintaining Nginx, NodeJS, MySQL, Dovecot and Postfix installations.</li>
+              <li>Managed multiple Linux-VPS instances and websites</li>
             </ul>
           </td>
         </tr>
-        
+
         <tr><td colspan="4"><hr></td></tr>
 
         <tr class="groups">
-          <td style="padding-left:20px" colspan="2">
-            <span class="title">Portfolio</span>
-          </td>
+          <td style="padding-left:20px" colspan="1" class="title">Portfolio</td>
+          <td colspan="3"></td>
         </tr>
         <tr>
           <td colspan="4" style="padding-left:40px; max-width: 300px">
-              <p>
-                <b>FlexLight Engine</b>
-                (<a href="https://github.com/arbobendik/FlexLight">GitHub</a> | <a href="https://arbogast.dev/?page=iframe&target=FlexLight/&v=wave">Demo</a>)
-              </p>
+              <b>FlexLight Engine</b>
+              (<a href="https://github.com/arbobendik/FlexLight">GitHub</a> | <a href="https://arbogast.dev/?page=iframe&target=FlexLight/&v=wave">Demo</a>)
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
               <p style="padding-left:20px">
-                FlexLight is a web-based fully modular render engine, that supports real time Monte-Carlo Pathtracing (using BVHs and importance sampling). 
-                The engine features a built-in Denoiser and uses PBR materials and several approximations grounded in physics to achieve realistic lighting. 
-                It allows obj file imports and supports fully dynamic scenes. I built the engine originally using javascript and WebGL2 and pivoted in 2024 to WebGPU and typescript.
-              </p>
-              <p>
-                <b>NeuNet</b>
-                (<a href="https://github.com/arbobendik/NeuNet">GitHub</a> | <a href="https://arbogast.dev/?page=iframe&target=NeuNet/">Demo</a>)
-              </p>
-              <p style="padding-left:20px">
-                Neunet is a web frontend library that implements MLPs using GPU acceleration with WebGL2.
-                It leverages WebGL2 fragment shaders to parallelize forward and backward passes for MLPs using the GPU on the browser frontend.
-                The library supports commonly used activation functions and layer normalization.
+                FlexLight is a web-based fully modular render engine that supports real time Monte-Carlo Pathtracing (using BVHs and importance sampling).
+                The engine uses PBR metallic materials and several approximations grounded in physics to achieve realistic lighting, including caustic effects.
+                It allows obj file imports and supports fully dynamic scenes. Built originally using javascript and WebGL2 and pivoted in 2024 to WebGPU and typescript.
               </p>
           </td>
         </tr>
@@ -276,16 +268,17 @@
         <tr><td colspan="4"><hr></td></tr>
 
         <tr class="groups">
-          <td style="padding-left:20px" colspan="1">
-            <span class="title">Languages</span>
+          <td style="padding-left:20px" colspan="1" class="title">
+            Languages
           </td>
-          <td style="padding-left:40px" colspan="3">
+          <td colspan="1"></td>
+          <td style="padding-left:40px" colspan="2">
             <span class="title">Skills</span>
           </td>
         </tr>
 
         <tr class="groups">
-          <td class="tile" style="padding-left:20px; width: 300px;" colspan="1">
+          <td class="tile" style="padding-left:2.25rem;" colspan="2">
             <table class="skills">
               <tr class="skill">
                 <td class="skill_title"><b>German</b></td>
@@ -302,15 +295,11 @@
             </table>
           </td>
 
-          <td class="tile" style="padding-left:20px" colspan="3">
+          <td class="tile" style="padding-left:2.25rem" colspan="2">
             <table class="skills">
-              <tr class="skill">
-                <td class="skill_title"><b>Backend</b></td>
-                <td class="skill_text">node, express, nextjs, fastapi, php</td>
-              </tr>
               <tr class="skill" >
-                <td class="skill_title"><b>Web Design</b></td>
-                <td class="skill_text">html, css, js, ts, react</td>
+                <td class="skill_title"><b>Web Development</b></td>
+                <td class="skill_text">js, ts, react, nextjs, fastapi, php</td>
               </tr>
               <tr class="skill">
                 <td class="skill_title"><b>Mobile</b></td>
@@ -326,7 +315,7 @@
               </tr>
               <tr class="skill">
                 <td class="skill_title"><b>DevOps</b></td>
-                <td class="skill_text">docker, linux, bash, nginx</td>
+                <td class="skill_text">docker, linux, bash, git, nginx</td>
               </tr>
             </table>
           </td>
@@ -335,19 +324,19 @@
         <tr><td colspan="4"><hr></td></tr>
 
         <tr class="groups">
-          <td style="padding-left:20px" colspan="2">
+          <td style="padding-left:20px" colspan="3">
             <span class="title">Additional Interests</span>
           </td>
         </tr>
 
         <tr>
-          <td colspan="2">
+          <td colspan="3">
             <ul type="square">
               <li>member of German party Bündnis 90/Die Grünen, Grüne Jugend</li>
               <li>volunteered to hold and organize children's church for over 3 years</li>
             </ul>
           </td>
-          <td colspan="2" style="padding-left: 50px; padding-top: 25px; padding-right: 50px;text-align: left;">
+          <td colspan="1" style="padding-left: 50px; padding-top: 25px; padding-right: 50px;text-align: left;">
             <hr>
             <span style="margin-left:10px; margin-top: - 5px">Signature</span>
           </td>
