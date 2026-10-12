@@ -4,7 +4,8 @@ Run `npm ci` after cloning to install Husky and activate the commit hook.
 Commit subjects must use `feat|chore|fix|wip(scope): summary`, for example
 `fix(resume): correct employment dates`. Merge commits are allowed.
 
-Edit `resume.html`, then regenerate `resume.pdf`:
+`resume.pdf` is a build output and not tracked. Pushing to `main` builds it in CI
+and publishes it at <https://github.com/arbobendik/CV/releases/latest/download/resume.pdf>. To build it locally:
 
 ```sh
 python3 generate_pdf.py
