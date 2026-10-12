@@ -1,0 +1,33 @@
+name: Resume PDF
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      FONTCONFIG_FILE: ${{ github.workspace }}/.github/fonts.conf
+    steps:
+      - uses: actions/checkout@v7
+      - name: Install pdfinfo and fonts
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils fonts-liberation
+      - name: Generate resume.pdf
+        run: python3 generate_pdf.py --no-sandbox
+      # the newest release backs github.com/arbobendik/CV/releases/latest/download/resume.pdf
+      - name: Release resume.pdf
+        if: github.event_name == 'push'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "build-${GITHUB_SHA::7}" resume.pdf --target "$GITHUB_SHA" --title "Résumé ${GITHUB_SHA::7}" --notes ""
+      - uses: actions/upload-artifact@v7
+        with:
+          name: resume
+          path: resume.pdf
+          if-no-files-found: error
