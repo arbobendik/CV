@@ -6,22 +6,13 @@
     <style>
       html {
         font-family: sans-serif;
-        font-size: 12px;
-      }
-      #img_block {
-        position: absolute;
-        width: 115px;
-        top: 70px;
-        right: 50px;
+        font-size: 12.5px;
       }
       #content {
         padding-top: 3rem;
       }
-      .title {
-        width: 10%;
-        color: #495;
-        text-align: right;
-        vertical-align: text-top;
+      .section {
+        padding: 0 0 .4rem 0;
         font-weight: bold;
       }
 
@@ -29,40 +20,20 @@
         vertical-align: text-top;
       }
 
-      .tile > * {
-        padding: .25rem 1rem .25rem 1rem;
+      .entry {
+        padding: 0 0 .75rem 1rem;
       }
-
-      .skill_title {
-        padding: .25rem .5rem 0 0;
-        text-align: right;
+      .entry_head {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
       }
-
-      .skill_text {
-        padding: .25rem 0 0 .5rem;
-        text-align: left;
+      .entry_head > span:last-child {
+        white-space: nowrap;
       }
-
-      td.title {
-        max-width: 150px;
-      }
-      .main_ul {
-        width: 10rem;
-        padding: 0;
-        padding-left: 2.5rem;
-        vertical-align: text-top;
-      }
-      .attribute {
-        color: #495;
-        text-align: right;
-        font-weight: bold;
-        vertical-align: text-top;
-      }
-      .indent {
-        vertical-align: text-top;
-      }
-      .indent > td > ul {
-        margin: 0px 0 0px 0;
+      .place {
+        color: #555;
+        font-style: italic;
       }
       hr {
         color: #bbb;
@@ -109,9 +80,6 @@
           width: 100%;
           border-spacing: 2px 1px;
         }
-        .tile > ul {
-          width: auto !important;
-        }
         tr {
           break-inside: avoid;
         }
@@ -123,195 +91,90 @@
       <h1>Bendik Arbogast</h1>
       <p class="header">
         Hadlaubstrasse 87, 8006 Zürich, Switzerland <br>
-        bendik@arbogast.dev | +41766991897 | <a href="https://arbogast.dev">arbogast.dev</a> | <a href="https://www.linkedin.com/in/bendik-arbogast">LinkedIn</a>
+        bendik@arbogast.dev | +41766991897 | arbogast.dev | LinkedIn/bendik-arbogast
       </p>
       <br>
       <table id="content">
         <tr><td colspan="4"><hr></td></tr>
+        <tr><td class="section" colspan="4">Education</td></tr>
         <tr class="groups">
-          <td class="title" rowspan="3">Education</td>
-          <td class="main_ul">09/2026 - Present</td>
-          <td colspan="2">
-            <b>ETH Zürich - MSc Computer Science</b>
+          <td class="entry" colspan="4">
+            <div class="entry_head"><span><b>ETH Zürich - MSc Computer Science</b> (Major: <b>Computer Graphics</b>)</span><span>09/2026 - 2028 (expected)</span></div>
+            <div class="place">Zürich, Switzerland</div>
           </td>
         </tr>
         <tr class="groups">
-          <td class="main_ul">09/2022 - 06/2026</td>
-          <td colspan="2">
-            <b>ETH Zürich - BSc Computer Science</b>
-          </td>
-        </tr>
-        <tr class="groups">
-          <td class="main_ul">09/2019 - 07/2022</td>
-          <td colspan="2">
-            <b>Gewerbliche Schule Backnang - <span style="white-space: nowrap;">Technisches Gymnasium, Computer Science Track</span></b>
-            <ul type="square" style="margin: 5px -5px 5px 0;">
-              <li>Abitur: 1.4 (German grading scale, 1.0 best)</li>
-            </ul>
+          <td class="entry" colspan="4">
+            <div class="entry_head"><span><b>ETH Zürich - BSc Computer Science</b> (Thesis grade: <b>5.5/6</b>)</span><span>09/2022 - 06/2026</span></div>
+            <div class="place">Zürich, Switzerland</div>
           </td>
         </tr>
 
         <tr><td colspan="4"><hr></td></tr>
-        <tr id="groups">
-          <td class="title" style="padding-left:20px"> Experience </td>
-          <td class="main_ul">04/2026 - 09/2026</td>
-          <td colspan="2">
-            <b>Software Development Intern - Esri R&amp;D Center Zurich</b><br>
-            Full-time · Zurich, Switzerland · Hybrid<br>
-            Developed and optimized a feasibility prototype within the graphics engine team, independently coordinating with multiple internal teams and stakeholders.
+        <tr><td class="section" colspan="4">Experience</td></tr>
+        <tr class="groups">
+          <td class="entry" colspan="4">
+            <div class="entry_head"><span><b>Software Development Intern - Esri R&amp;D Center Zurich</b></span><span>04/2026 - 09/2026</span></div>
+            <div class="place">Zürich, Switzerland · Full-time</div>
+            <ul type="square" style="margin: 2px 0 0 0; padding-left: 1.25rem;">
+              <li>Made street geometry generation <b>100x faster</b> through <b>GPU tessellation</b> in TypeScript and WebGL.</li>
+              <li>Went beyond the internship scope with commits merged into <b>2 Esri products</b>:<br>the <b>ArcGIS Maps SDK</b> and <b>CityEngine</b>.</li>
+              <li>Managed coordination between <b>3 internal product teams</b> and stakeholders.</li>
+            </ul>
           </td>
         </tr>
         <tr class="groups">
-          <td></td>
-          <td class="main_ul">12/2023 - Present</td>
-          <td colspan="2">
-            <b>Software Engineer - Arbogast Solutions</b> (self-employed)<br>
-            Developed web and automation solutions, including custom software for a Zurich-based construction business.
+          <td class="entry" colspan="4">
+            <div class="entry_head"><span><b>Student Researcher - Disney Research</b></span><span>09/2025 - 04/2026</span></div>
+            <div class="place">Zürich, Switzerland</div>
+            <ul type="square" style="margin: 2px 0 0 0; padding-left: 1.25rem;">
+              <li>Built a PyTorch pipeline that poses objects in 3D scenes to match a target photograph<br>through gradient-based SIM(3) optimization.</li>
+              <li><b>Matched the DRTK</b> differentiable rasterizer across <b>15 test scenes</b><br>using only a <b>483M-parameter</b> triangle-to-image transformer (RenderFormer), with headroom as these models scale.</li>
+              <li>Fit transformer backpropagation into GPU memory with gradient checkpointing, per-object gradient gating and fp16.</li>
+            </ul>
           </td>
         </tr>
-        <tr id="groups">
-          <td></td>
-          <td class="main_ul">09/2025 - 04/2026</td>
-          <td colspan="2">
-            <b>Student Researcher (Bachelor Thesis) - Disney Research</b><br>
-            Developed a PyTorch framework for gradient-based SIM(3) pose optimization using frozen RenderFormer weights, designed to support future triangle-to-image transformers without fine-tuning. Compared differentiable rendering with DRTK and scene posing with SAM 3D Objects. Thesis grade: 5.5/6.
+        <tr class="groups">
+          <td class="entry" colspan="4">
+            <div class="entry_head"><span><b>Founder - Arbogast Solutions</b></span><span>12/2023 - Present</span></div>
+            <div class="place">Zürich, Switzerland</div>
+            <ul type="square" style="margin: 2px 0 0 0; padding-left: 1.25rem;">
+              <li>Automated a document type that took a Zürich construction company's employees<br>about <b>10 hours a week</b> (<b>20-30%</b> of their working time).</li>
+              <li>Worked directly with the client from requirements to delivery.</li>
+              <li>Build and host web solutions on my own Linux VPS servers with Docker.</li>
+            </ul>
           </td>
         </tr>
         <tr><td colspan="4"><hr></td></tr>
-        <tr id="groups">
-          <td class="title" style="padding-left:20px" rowspan="1">Expertise</td>
-          <td class="main_ul" colspan="3">
+        <tr><td class="section" colspan="4">Projects</td></tr>
+        <tr class="groups">
+          <td class="entry" colspan="4">
+            <div class="entry_head"><span><b>FlexLight Engine</b> (GitHub/arbobendik/FlexLight, GitHub/arbobendik/FlexCudaPT)</span><span>06/2021 - Present</span></div>
+            <ul type="square" style="margin: 2px 0 0 0; padding-left: 1.25rem;">
+              <li>State-of-the-art real-time path tracer in TypeScript, WebGPU and WebGL2, running at up to <b>60 fps</b><br>in the browser and in Blender's viewport shading (BVH, BSDFs, importance sampling, dynamic scenes).</li>
+              <li>Implements NVIDIA's <b>ReSTIR PT Enhanced</b> (Lin et al., 2026), converging <b>over 20x faster</b> than plain path tracing.</li>
+              <li><b>Blender render engine</b> in C++, CUDA and <b>OptiX</b>: <b>4x faster than Cycles</b><br>and converges <b>around 60x faster</b> in equal time thanks to ReSTIR and a slimmer kernel.</li>
+            </ul>
+          </td>
         </tr>
+        <tr><td colspan="4"><hr></td></tr>
+        <tr><td class="section" colspan="4">Engagement</td></tr>
         <tr>
           <td colspan="4">
-            <table style="width: 100%; table-layout: fixed;">
-        <tr>
-          <td style="padding-left:30px" class="tile" colspan="1">
-            <b>Software Development</b>
-            <ul type="square" style="margin: 0; padding-right: 0">
-              <li>Designed and developed a custom automation solution for a client.</li>
-              <li>8+ years of programming through personal projects.</li>
-              <li>Highly proficient in JavaScript, TypeScript, Python and C.</li>
-              <li>C++ experience through university coursework.</li>
-            </ul>
-          </td>
-
-          <td style="padding-left:30px" class="tile" colspan="1">
-            <b>Machine Learning</b>
-            <ul type="square" style="margin: 0">
-              <li>Multiple personal and university projects, including my bachelor thesis, using NumPy, pandas and PyTorch.</li>
-              <li>Implemented GPU-accelerated MLPs using WebGL and WebGPU.</li>
-            </ul>
-          </td>
-        </tr>
-
-        <tr class="groups">
-          <td style="padding-left:30px" class="tile" colspan="1">
-            <b>Computer Graphics</b>
-            <ul type="square" style="margin: 0">
-              <li>Multiple projects using WebGL2 since 2020.</li>
-              <li>WebGPU implementation of FlexLight.</li>
-              <li>Architecture planner using WebGPU.</li>
-              <li>Currently learning CUDA.</li>
-            </ul>
-          </td>
-
-          <td style="padding-left:30px" class="tile" colspan="1">
-            <b>Linux</b>
-            <ul type="square" style="margin: 0">
-              <li>Linux as my primary operating system for 8+ years.</li>
-              <li>Experience with Docker.</li>
-              <li>Managed multiple Linux VPS instances and websites.</li>
-            </ul>
-          </td>
-        </tr>
-            </table>
-          </td>
-        </tr>
-
-        <tr><td colspan="4"><hr></td></tr>
-
-        <tr class="groups">
-          <td style="padding-left:20px" colspan="1" class="title">Portfolio</td>
-          <td colspan="3"></td>
-        </tr>
-        <tr>
-          <td colspan="4" style="padding-left:40px; max-width: 300px">
-              <b>FlexLight Engine</b>
-              (<a href="https://github.com/arbobendik/FlexLight">GitHub</a> | <a href="https://arbogast.dev/?page=iframe&amp;target=FlexLight/&amp;v=wave">Demo</a>)
-          </td>
-        </tr>
-        <tr>
-          <td colspan="4">
-              <p style="padding-left:40px">
-                Designed, implemented and manually optimized a path tracer from scratch, with ray-geometry intersection, BSDFs, BVH acceleration and importance sampling,
-                combining original implementations with techniques from rendering literature.
-                Implemented physically based materials and dynamic scenes. Migrated from JavaScript/WebGL2 to TypeScript/WebGPU in 2024.
-                The engine implements NVIDIA's state-of-the-art ReSTIR PT Enhanced algorithm (<a href="https://research.nvidia.com/labs/rtr/publication/lin2026restirptenhanced/">Lin et al., 2026</a>).
-              </p>
-          </td>
-        </tr>
-
-        <tr><td colspan="4"><hr></td></tr>
-
-        <tr class="groups">
-          <td style="padding-left:20px" colspan="1" class="title">
-            Languages
-          </td>
-          <td colspan="1"></td>
-          <td style="padding-left:40px" colspan="2">
-            <span class="title">Skills</span>
-          </td>
-        </tr>
-
-        <tr class="groups">
-          <td class="tile" style="padding-left:2.25rem;" colspan="2">
-            <table class="skills">
-              <tr class="skill">
-                <td class="skill_title"><b>German</b></td>
-                <td class="skill_text">Native</td>
-              </tr>
-              <tr class="skill">
-                <td class="skill_title"><b>English</b></td>
-                <td class="skill_text">C2</td>
-              </tr>
-              <tr class="skill">
-                <td class="skill_title" ><b>French</b></td>
-                <td class="skill_text">B1 (DELF)</td>
-              </tr>
-            </table>
-          </td>
-
-          <td class="tile" style="padding-left:2.25rem" colspan="2">
-            <ul type="square" style="margin: 0;">
-              <li>Integrate into teams and adapt to their workflows.</li>
-              <li>Work independently and prioritize goals.</li>
-              <li>Communicate with clients to clarify needs and expectations.</li>
-              <li>Communicate and coordinate independently with stakeholders.</li>
-            </ul>
-          </td>
-        </tr>
-
-        <tr><td colspan="4"><hr></td></tr>
-
-        <tr class="groups">
-          <td style="padding-left:20px" colspan="3">
-            <span class="title">Engagement</span>
-          </td>
-        </tr>
-
-        <tr>
-          <td colspan="3">
-            <ul type="square">
-              <li><b>Head of Sponsoring for VIScon 2026</b></li>
+            <ul type="square" style="margin: 0 0 0 1rem; padding-left: 1.25rem;">
+              <li><b>Head of Sponsoring for VIScon 2026</b> (750 participants, 150 helpers, 30-person committee):<br>handled sponsoring <b>alone</b> and raised <b>CHF 120k</b><br>from <b>4 main sponsors</b> (Ergon, Jane Street, IPT, D ONE) and <b>5 co-sponsors</b>.</li>
               <li>Member of Bündnis 90/Die Grünen and Grüne Jugend.</li>
             </ul>
           </td>
-          <td colspan="1" style="padding-left: 50px; padding-top: 25px; padding-right: 50px;text-align: left;">
-            <hr>
-            <span style="margin-left:10px; margin-top: - 5px">Signature</span>
-          </td>
         </tr>
+
+        <tr><td colspan="4"><hr></td></tr>
+        <tr><td class="section" colspan="4">Skills</td></tr>
+        <tr><td class="entry" colspan="4">Python, TypeScript, JavaScript, C++, CUDA, OptiX, C, Java, PyTorch, NumPy, pandas, WebGPU, WebGL, Docker</td></tr>
+        <tr><td class="section" colspan="4">Languages</td></tr>
+        <tr><td class="entry" colspan="4">German (native), English (C2), French (B1, DELF)</td></tr>
+        <tr><td class="section" colspan="4">Interests</td></tr>
+        <tr><td class="entry" colspan="4">Self-hosting, politics, karaoke, vegetarianism, Linux (my main OS for 8+ years)</td></tr>
       </table>
     </main>
   </body>
